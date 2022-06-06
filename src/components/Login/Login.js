@@ -42,7 +42,7 @@ const Login = () => {
 
   const onSubmitSuccess = (jwtToken) => {
     Cookies.set("jwt_token", jwtToken, { expires: 30 });
-    history.replace("/");
+    history.replace("/dashboard");
   };
   const onSubmitFailure = (errorMsg) => {
     setState({ showSubmitError: true, errorMsg });

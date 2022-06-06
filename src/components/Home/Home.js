@@ -2,7 +2,7 @@ import Cookies from "js-cookie";
 import { Redirect, Link, useHistory, Route } from "react-router-dom";
 import "./Home.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { BsFillBellFill } from "react-icons/bs";
+// import { BsFillBellFill } from "react-icons/bs";
 import Sidebar from "../Sidebar/Sidebar";
 import Popup from "reactjs-popup";
 import Profile from "../Profile/Profile";
@@ -10,6 +10,7 @@ import Dashboard from "../Dashboard/Dashboard";
 import Allzones from "../Allzones/Allzones";
 import Attendance from "../Attendance/Attendance";
 import Employees from "../Employees/Employees";
+import MuiDrawer from "../MuiDrawer/MuiDrawer";
 
 const Home = () => {
   const history = useHistory();
@@ -31,7 +32,7 @@ const Home = () => {
             <h1 className="glieder-scan">Glider scan</h1>
           </div>
           <div className="nav-profile-container">
-            <BsFillBellFill className="menu-icon" />
+            <MuiDrawer />
             <p className="admin-name">Hi Admin</p>
             <div className="pop-up-container">
               <Popup
@@ -46,20 +47,23 @@ const Home = () => {
                 }
                 position="bottom left"
               >
+                {close => (
                 <div>
                   <Link style={{ textDecoration: "none" }} to="/profile">
-                    <p className="profile-text">profile</p>
+                    <p className="profile-text" onClick={() => close()}>profile</p>
                   </Link>
                   <Link style={{ textDecoration: "none" }} to="/login">
                     <button
                       type="button"
                       onClick={logout}
                       className="logout-button"
+                      
                     >
                       Logout
                     </button>
                   </Link>
                 </div>
+                )}
               </Popup>
             </div>
           </div>
@@ -69,6 +73,7 @@ const Home = () => {
       <div className="content">
         <Sidebar />
         <div>
+          
             <Route path='/profile'>
                 <Profile />
             </Route>
@@ -84,6 +89,7 @@ const Home = () => {
             <Route path='/employees'>
                 <Employees/>
             </Route>
+           
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 .profile-container {
     display: flex;
     flex-direction: column;
-    width:94vw;
+    width:90vw;
     padding:10px;
   }
   .profile-header-container {

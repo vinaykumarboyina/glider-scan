@@ -1,4 +1,5 @@
 import { BiDotsVerticalRounded } from "react-icons/bi";
+import EmployeeDrawer from "../EmployeeDrawer/EmployeeDrawer";
 import "./Employees.css";
 
 const Employees = () => {
@@ -7,7 +8,7 @@ const Employees = () => {
     
       <div className="header-container">
         <h1 className="heading">Employee</h1>
-        <button className="button">Create New</button>
+        <EmployeeDrawer />
       </div>
       <hr className="hr-line" />
       <div className="employee-header-container">

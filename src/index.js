@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-
+import './Icons/icons.css'
 // import Home from './components/Home/Home';
 // import Login from './components/Login/Login';
 import { BrowserRouter } from 'react-router-dom';

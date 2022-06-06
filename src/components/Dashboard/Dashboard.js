@@ -17,7 +17,7 @@ const Dashboard = () => {
         />
         <div className="dashboard-profile">
           <h1 className="dashboard-name">
-            Good Morning, <span style={{ color: "#ef5350" }}>Siva Sankar</span>
+            Good Morning, <span style={{ color: "#ef5350" }}>Nagaraju C</span>
           </h1>
           <p className="dashboard-location">Spar, Kothaguda, Hyderabad</p>
         </div>
